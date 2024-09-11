@@ -4,21 +4,24 @@
 public class Principal {
     
     public static void main(String args[]){
-        int size = 15;
-        int[] arr1 = new int[size];
+        int size = Integer.parseInt(args[0]);
+        int[] arr = new int[size];
+        Utilerias.llenarArreglo(arr, size);
 
-        Utilerias.llenarArreglo(arr1, size);
-        Utilerias.imprimirArreglo(arr1);
+        System.out.println("Arreglo original: ");
+        Utilerias.imprimirArreglo(arr);
 
 
         //Creacion de los objetos
-        Insercion objInsercion = new Insercion();
-        Burbuja obkBurbuja = new Burbuja();
-        Seleccion objSeleccion = new Seleccion();
+        Insercion objInsercion = new Insercion(arr);
+        Burbuja objBurbuja = new Burbuja(arr);
+        Seleccion objSeleccion = new Seleccion(arr);
 
-        MergeSort objMergeSort = new MergeSort();
-        QuickSort objQuickSort = new QuickSort();
+        MergeSort objMergeSort = new MergeSort(arr);
+        QuickSort objQuickSort = new QuickSort(arr);
         //Heap
+
+        objBurbuja.bub
         
         Utilerias.imprimirArreglo(arr1);        
     }  

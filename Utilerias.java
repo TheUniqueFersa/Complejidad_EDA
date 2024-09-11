@@ -2,7 +2,6 @@ import java.util.Scanner;
 import java.util.List;
 import java.util.Random;
 
-
 public class Utilerias {
     public static void llenarArreglo(int[] arreglo, int n){
         Random random = new Random();
@@ -17,13 +16,14 @@ public class Utilerias {
         }
         System.out.println(" ");
     }
+    
     public static void imprimirArregloChar(char[] arreglo){
         for(char i:arreglo){  
             System.out.print(i+" ");  
         }
         System.out.println(" ");
  }
-    //7
+    //7 operaciones básicas
     public static void intercambiar(int[] arr, int x, int y) {
         int temp = arr[x];  //2 
         arr[x] = arr[y];  //3
