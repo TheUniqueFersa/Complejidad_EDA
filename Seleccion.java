@@ -2,7 +2,7 @@
 
 public class Seleccion {  
    
-    public void selectionSort(int[] arr){  
+    public static void selectionSort(int[] arr){  
         int n = arr.length;
         for (int i = 0; i < n - 1; i++){  
             int min = i;  
@@ -11,10 +11,7 @@ public class Seleccion {
                     min = j;  
                 }                      
             }  
-            
             Utilerias.intercambiar(arr, i,min);
-              
-                 
         }  
     }  
 

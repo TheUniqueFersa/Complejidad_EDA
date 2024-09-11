@@ -53,7 +53,7 @@ public class Burbuja {
         return operaciones;
     }
     public static void main(String args[]){  
-        int[] arr1 = {16, 8, 4, 12, 2}; 
+        int[] arr1 = {8, 2, 53, 12, 24, 55, 34,56, 34, 2}; 
         //int[] arr2 = {10,15,4,3,44,12,59,23}; 
         //int[] arr3 = {2,5,4,7,1,9,12,15,20};
         System.out.println(BUBBLESORT(arr1));
