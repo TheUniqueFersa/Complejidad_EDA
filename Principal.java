@@ -18,8 +18,10 @@ public class Principal {
 
         MergeSort objMergeSort = new MergeSort();
         QuickSort objQuickSort = new QuickSort();
-        //Heap
-        
+        HeapSort objHeapSort = new HeapSort();
+
+        objHeapSort.heapSort(arr1);
+        System.out.println("heap");
         Utilerias.imprimirArreglo(arr1);        
     }  
     
