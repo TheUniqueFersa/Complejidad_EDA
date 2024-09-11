@@ -1,0 +1,13 @@
+**/**.pdf
+**/**.zip
+
+**/__MACOSX
+
+
+**/**.class
+**/**.exe
+**/**.o
+
+/ignoreMe
+/tests
+/notes
