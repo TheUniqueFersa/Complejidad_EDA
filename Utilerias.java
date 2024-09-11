@@ -16,15 +16,15 @@ public class Utilerias {
         }
         System.out.println(" ");
  }
-
+    //7
     public static void intercambiar(int[] arr, int x, int y) {
-        int temp = arr[x];   
-        arr[x] = arr[y];  
-        arr[y] = temp;
+        int temp = arr[x];  //2 
+        arr[x] = arr[y];  //3
+        arr[y] = temp; //2
     }
-    public static void pedirDatos(char[] arr, int tamaño){
+    public static void pedirDatos(char[] arr, int tamano){
         Scanner en = new Scanner(System.in);
-        for (int i = 0; i < tamaño; i++) {
+        for (int i = 0; i < tamano; i++) {
             System.out.println("Valor: "+ (i+1));
             arr[i] = en.next().charAt(0);
         }
