@@ -17,6 +17,7 @@ public class Utilerias {
         System.out.println(" ");
     }
     
+
     public static void imprimirArregloChar(char[] arreglo){
         for(char i:arreglo){  
             System.out.print(i+" ");  
@@ -132,5 +133,31 @@ public class Utilerias {
         }
         res[llenado] = letra;
 
+    }
+
+    //HEapSort heapify buildhwap
+    public static void heapify(int[] A, int i, int size) {
+        int l = 2 * i + 1; // nodo hijo izq
+        int r = 2 * i + 2; // nodo hijo der
+        int largest;
+        if (l <= size && A[l] > A[i]) {
+            largest = l;
+        } else {
+            largest = i;
+        }
+        if (r <= size && A[r] > A[largest]) {
+            largest = r;
+        }
+        if (largest != i) {
+            Utilerias.intercambiar(A, i, largest);
+            Utilerias.heapify(A, largest, size);
+        }
+    }
+    public static void buildHeap(int[] A) {
+        int size = A.length;
+        for (int i = (size - 1) / 2; i >= 0; i--) {
+            Utilerias.heapify(A, i, size - 1);
+            //printArray(A);
+        }
     }
 }

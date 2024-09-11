@@ -17,12 +17,12 @@ public class Principal {
         Burbuja objBurbuja = new Burbuja(arr);
         Seleccion objSeleccion = new Seleccion(arr);
 
-        MergeSort objMergeSort = new MergeSort(arr);
-        QuickSort objQuickSort = new QuickSort(arr);
-        //Heap
+        MergeSort objMergeSort = new MergeSort();
+        QuickSort objQuickSort = new QuickSort();
+        HeapSort objHeapSort = new HeapSort();
 
-        objBurbuja.bub
-        
+        objHeapSort.heapSort(arr1);
+        System.out.println("heap");
         Utilerias.imprimirArreglo(arr1);        
     }  
     

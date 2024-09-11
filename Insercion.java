@@ -2,7 +2,7 @@
 
 public class Insercion{  
     
-    public static void insertionSort(int array[]) {  
+    public void insertionSort(int array[]) {  
         int n = array.length;  
         for (int j = 1; j < n; j++) {  
             int key = array[j];  
