@@ -1,9 +1,16 @@
 import java.util.Scanner;
 import java.util.List;
+import java.util.Random;
 
 
 public class Utilerias {
-    
+    public static void llenarArreglo(int[] arreglo, int n){
+        Random random = new Random();
+        for (int i = 0; i < n; i++) {
+            arreglo[i] =  random.nextInt(600)+1;
+        }
+    }
+
     public static void imprimirArreglo(int[] arreglo){
         for(int i:arreglo){  
             System.out.print(i+" ");  
