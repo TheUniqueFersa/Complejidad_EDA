@@ -24,7 +24,7 @@ public class Bubble extends AlgoritmoOrdenamiento{
     }
     protected Resultado sort() {
         bubbleSort();
-        Resultado res = new Resultado("BubbleSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("BubbleSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }

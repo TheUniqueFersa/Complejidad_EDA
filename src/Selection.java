@@ -7,7 +7,7 @@ public class Selection extends AlgoritmoOrdenamiento{
     }
     protected Resultado sort() {
         selectionSort();
-        Resultado res = new Resultado("SelectionSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("SelectionSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }

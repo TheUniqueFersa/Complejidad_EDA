@@ -7,7 +7,7 @@ public class Insertion extends AlgoritmoOrdenamiento{
     }
     protected Resultado sort() {
         insertionSort();
-        Resultado res = new Resultado("InsertionSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("InsertionSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }
@@ -37,7 +37,6 @@ public class Insertion extends AlgoritmoOrdenamiento{
             }  
             arr[i+1] = key; 
             intercambios++;
-            inserciones++;
             operaciones+=3; //para acceder al elemento y comparar 
 
             operaciones++; //para la condicion del for

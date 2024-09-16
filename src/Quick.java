@@ -7,7 +7,7 @@ public class Quick extends AlgoritmoOrdenamiento{
     }
     protected Resultado sort() {
         QuickSort(0, this.arr.length-1);
-        Resultado res = new Resultado("QuickSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("QuickSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }
