@@ -3,6 +3,8 @@ public class Quick extends AlgoritmoOrdenamiento{
     public Quick(int[] arr){
         super(arr);
     }
+    public Quick(){
+    }
     protected Resultado sort() {
         QuickSort(0, this.arr.length-1);
         Resultado res = new Resultado("QuickSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);

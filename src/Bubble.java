@@ -1,7 +1,7 @@
 
 /*
  * @autors: Fernando López y Luis González
- * @file: Burbuja.java
+ * @file: Bubble.java
  * @brief: Esta clase implementa el algoritmo de ordenamiento burbuja
  * y extiende de la clase AlgoritmoOrdenamiento
  * @date: 16/09/2024
@@ -11,14 +11,16 @@
  * @see AlgoritmoOrdenamiento
  * 
  */
-public class Burbuja extends AlgoritmoOrdenamiento{
+public class Bubble extends AlgoritmoOrdenamiento{
     /*
-     * @brief: Constructor de la clase Burbuja
+     * @brief: Constructor de la clase Bubble
      * @param: int[] arr
      * @return: void
      */
-    public Burbuja(int[] arr){
+    public Bubble(int[] arr){
         super(arr);
+    }
+    public Bubble(){
     }
     protected Resultado sort() {
         bubbleSort();
@@ -81,7 +83,7 @@ public class Burbuja extends AlgoritmoOrdenamiento{
         int[] arr = {10,15,4,3,44,12,59,23}; 
         //int[] arr2 = {10,15,4,3,44,12,59,23}; 
         //int[] arr3 = {2,5,4,7,1,9,12,15,20};
-        Burbuja b = new Burbuja(arr);
+        Bubble b = new Bubble(arr);
         System.out.println(b.calcularOperaciones());
     }
 }

@@ -6,7 +6,7 @@ public class Utilerias {
     public static void randomArr(int[] arreglo, int n){
         Random random = new Random();
         for (int i = 0; i < n; i++) {
-            arreglo[i] =  random.nextInt(600)+1;
+            arreglo[i] =  random.nextInt(1000)+1;
         }
     }
 

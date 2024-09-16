@@ -1,41 +1,51 @@
-//import Burbuja;
-
+//import Bubble;
+import java.util.ArrayList;
 
 public class Principal {
     public static void main(String args[]){
-        int tam = Integer.parseInt(args[0]);
-        int n = Integer.parseInt(args[1]);
-        int[] arr = new int[tam];
-        Utilerias.randomArr(arr, tam);
-
-        System.out.println("Arreglo original: ");
+        
+        int n = Integer.parseInt(args[0]);
+        String[] arg2 = args[1].split(",");
+        ArrayList<Integer> tamArr = new ArrayList<>();
+        for(int i = 0; i < arg2.length; i++){
+            tamArr.add(Integer.parseInt(arg2[i]));
+        }
+        // int primerTam = tamArr.get(0);
+        // int [] arr = new int[primerTam];
+        // tamArr.remove(0);
+        for(int i = 0; i < tamArr.size(); i++){
+            System.out.println("Tamaño del arreglo: "+tamArr.get(i));
+        }
+        // Utilerias.randomArr(arr, primerTam);
         // Utilerias.imprimirArreglo(arr);
+        Bubble bubble = new Bubble();
+        Selection selection = new Selection();
+        Insertion insertion = new Insertion();
+        Heap heap = new Heap();
+        Quick quick = new Quick();
+        Merge merge = new Merge();
+
+        int[] arr;
+        for (int tam : tamArr) {
+            arr = new int[tam];
+            for(int i = 0; i < n; i++){
+                Utilerias.randomArr(arr, tam);
+                // Utilerias.imprimirArreglo(arr);
+                bubble.inicializarArr(arr);
+                selection.inicializarArr(arr);
+                insertion.inicializarArr(arr);
+                heap.inicializarArr(arr);
+                quick.inicializarArr(arr);
+                merge.inicializarArr(arr);
 
 
-        //Creacion de los objetos
-        // Insercion objInsercion = new Insercion(arr);
-        Burbuja bubble = new Burbuja(arr);
-        Seleccion selection = new Seleccion(arr);
-        Insercion insertion = new Insercion(arr);
-        Heap heap = new Heap(arr);
-        Quick quick = new Quick(arr);
-        Merge merge = new Merge(arr);
-        for(int i = 0; i < n; i++){
-            bubble.calcularOperaciones();
-            selection.calcularOperaciones();
-            insertion.calcularOperaciones();
-            heap.calcularOperaciones();
-            quick.calcularOperaciones();
-            merge.calcularOperaciones();
-
-            Utilerias.randomArr(arr, tam);
-            // Utilerias.imprimirArreglo(arr);
-            bubble.inicializarArr(arr);
-            selection.inicializarArr(arr);
-            insertion.inicializarArr(arr);
-            heap.inicializarArr(arr);
-            quick.inicializarArr(arr);
-            merge.inicializarArr(arr);
+                bubble.calcularOperaciones();
+                selection.calcularOperaciones();
+                insertion.calcularOperaciones();
+                heap.calcularOperaciones();
+                quick.calcularOperaciones();
+                merge.calcularOperaciones();
+            }
         }
         System.out.println("--- BubbleSort ---");
         for(Resultado r: bubble.resultados){
@@ -73,34 +83,5 @@ public class Principal {
             r.escribirOperacionesEnArchivo();
             System.out.println();
         }
-
-        // Seleccion objSeleccion = new Seleccion(arr);
-
-        // MergeSort objMergeSort = new MergeSort();
-        // QuickSort objQuickSort = new QuickSort();
-        // HeapSort objHeapSort = new HeapSort();
-
-        // objHeapSort.heapSort(arr1);
-        // System.out.println("heap");
-        // Utilerias.imprimirArreglo(arr1);        
-    }  
-    
-   
+    }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

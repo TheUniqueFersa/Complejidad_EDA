@@ -1,7 +1,9 @@
 
-public class Insercion extends AlgoritmoOrdenamiento{  
-    public Insercion(int[] arr){
+public class Insertion extends AlgoritmoOrdenamiento{  
+    public Insertion(int[] arr){
         super(arr);
+    }
+    public Insertion(){
     }
     protected Resultado sort() {
         insertionSort();

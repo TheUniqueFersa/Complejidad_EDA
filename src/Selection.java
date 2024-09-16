@@ -1,7 +1,9 @@
 
-public class Seleccion extends AlgoritmoOrdenamiento{
-    public Seleccion(int[] arr){
+public class Selection extends AlgoritmoOrdenamiento{
+    public Selection(int[] arr){
         super(arr);
+    }
+    public Selection(){
     }
     protected Resultado sort() {
         selectionSort();

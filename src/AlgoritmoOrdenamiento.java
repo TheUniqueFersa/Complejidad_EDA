@@ -11,6 +11,8 @@ abstract class AlgoritmoOrdenamiento{
     public AlgoritmoOrdenamiento(int[] arr){
         this.arr = arr.clone();
     }
+    public AlgoritmoOrdenamiento(){
+    }
     public Resultado calcularOperaciones(){
         operaciones = 0;
         comparaciones = 0;

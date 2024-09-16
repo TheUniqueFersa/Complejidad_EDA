@@ -2,6 +2,8 @@ public class Heap extends AlgoritmoOrdenamiento {
     public Heap(int[] arr) {
         super(arr);
     }
+    public Heap() {
+    }
     protected Resultado sort() {
         heapSort();
         Resultado res = new Resultado("HeapSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
@@ -55,7 +57,7 @@ public class Heap extends AlgoritmoOrdenamiento {
             operaciones+=7;
             intercambios++;
             Utilerias.intercambiar(arr, i, largest);
-            heapify(arr, largest, size);
+            heapify(largest, size);
         }
     }
     private void buildHeap() {
@@ -65,7 +67,7 @@ public class Heap extends AlgoritmoOrdenamiento {
         operaciones+=4;
         for (int i = (size - 1) / 2; i >= 0; i--, operaciones+=3) {
             operaciones++;
-            heapify(arr, i, size - 1);
+            heapify(i, size - 1);
             //printArray(A);
         }
     }

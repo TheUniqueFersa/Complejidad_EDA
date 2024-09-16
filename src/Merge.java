@@ -2,6 +2,8 @@ public class Merge extends AlgoritmoOrdenamiento {
     public Merge(int[] arr) {
         super(arr);
     }
+    public Merge() {
+    }
     protected Resultado sort() {
         mergeSort(0, this.arr.length-1);
         Resultado res = new Resultado("MergeSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
@@ -99,12 +101,12 @@ public class Merge extends AlgoritmoOrdenamiento {
     }
 
     //STATIC
-    public static void mergeSort(int arr[], int left, int right) {
+    public static void sort(int arr[], int left, int right) {
         if (left < right) {
             int mid = (left + right) / 2;
 
-            mergeSort(arr, left, mid);
-            mergeSort(arr, mid + 1, right);
+            sort(arr, left, mid);
+            sort(arr, mid + 1, right);
 
             merge(arr, left, mid, right);
         }
