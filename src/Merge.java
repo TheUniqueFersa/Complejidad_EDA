@@ -15,10 +15,10 @@ public class Merge extends AlgoritmoOrdenamiento {
             int mid = (left + right) / 2;
             operaciones+=3;
 
-            mergeSort(arr, left, mid);
+            mergeSort(left, mid);
 
             operaciones++;
-            mergeSort(arr, mid + 1, right);
+            mergeSort(mid + 1, right);
 
             operaciones++;
             merge(left, mid, right);

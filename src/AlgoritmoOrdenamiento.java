@@ -2,9 +2,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 abstract class AlgoritmoOrdenamiento{
-    protected int operaciones;
-    protected int comparaciones;
-    protected int intercambios;
+    protected long operaciones;
+    protected long comparaciones;
+    protected long intercambios;
     protected int inserciones;
     protected int[] arr;
     ArrayList<Resultado> resultados = new ArrayList<Resultado>();
@@ -25,13 +25,13 @@ abstract class AlgoritmoOrdenamiento{
 }
 class Resultado{
     private String ordenadoPor;
-    private int operaciones;
-    private int comparaciones;
-    private int intercambios;
+    private long operaciones;
+    private long comparaciones;
+    private long intercambios;
     private int inserciones;
     private int elemOrdenados;
     private int[] resultado;
-    public Resultado(String alg, int operaciones, int comparaciones, int intercambios, int inserciones, int[] res, int elementos){
+    public Resultado(String alg, long operaciones, long comparaciones, long intercambios, int inserciones, int[] res, int elementos){
         this.ordenadoPor = alg;
         this.operaciones = operaciones;
         this.comparaciones = comparaciones;
@@ -53,12 +53,12 @@ class Resultado{
         }
         System.out.println();
     }
-    public int operaciones(){
+    public long operaciones(){
         return operaciones;
     }
     public void escribirOperacionesEnArchivo(){
         try {
-            FileWriter archivo = new FileWriter("../data/"+ordenadoPor+"/"+elemOrdenados+".txt", true);
+            FileWriter archivo = new FileWriter("../data/"+ordenadoPor+".txt", true);
             // archivo.write(ordenadoPor+"\n");
             // archivo.write("Operaciones:\n"+operaciones+"\n");
             // archivo.write("Comparaciones: "+comparaciones+"\n");

@@ -9,7 +9,7 @@ public class Principal {
         Utilerias.randomArr(arr, tam);
 
         System.out.println("Arreglo original: ");
-        Utilerias.imprimirArreglo(arr);
+        // Utilerias.imprimirArreglo(arr);
 
 
         //Creacion de los objetos
@@ -29,7 +29,7 @@ public class Principal {
             merge.calcularOperaciones();
 
             Utilerias.randomArr(arr, tam);
-            Utilerias.imprimirArreglo(arr);
+            // Utilerias.imprimirArreglo(arr);
             bubble.inicializarArr(arr);
             selection.inicializarArr(arr);
             insertion.inicializarArr(arr);
@@ -39,32 +39,38 @@ public class Principal {
         }
         System.out.println("--- BubbleSort ---");
         for(Resultado r: bubble.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
         System.out.println("--- SelectionSort ---");
         for(Resultado r: selection.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
         System.out.println("--- InsertionSort ---");
         for(Resultado r: insertion.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
         System.out.println("--- HeapSort ---");
         for(Resultado r: heap.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
         System.out.println("--- QuickSort ---");
         for(Resultado r: quick.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
         System.out.println("--- MergeSort ---");
         for(Resultado r: merge.resultados){
-            r.mostrarResultados();
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
             System.out.println();
         }
 
