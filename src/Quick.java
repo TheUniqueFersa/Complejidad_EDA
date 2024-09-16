@@ -32,9 +32,11 @@ public class Quick extends AlgoritmoOrdenamiento{
 
         arr[i+1] = arr[high];
         operaciones+=4;
+        intercambios++;
 
         arr[high] = temp;
         operaciones+=2;
+        intercambios++;
 
         operaciones++;
         return i+1;

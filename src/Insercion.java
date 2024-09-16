@@ -31,6 +31,7 @@ public class Insercion extends AlgoritmoOrdenamiento{
                 operaciones+=2; //para el decremento de i
                 
                 operaciones+=4; //para la comparacion
+                comparaciones++; //para la comparacion
             }  
             arr[i+1] = key; 
             intercambios++;
