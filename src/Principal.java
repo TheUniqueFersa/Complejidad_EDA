@@ -15,19 +15,30 @@ public class Principal {
         //Creacion de los objetos
         // Insercion objInsercion = new Insercion(arr);
         Burbuja bubble = new Burbuja(arr);
+        Seleccion selection = new Seleccion(arr);
         Insercion insertion = new Insercion(arr);
         for(int i = 0; i < n; i++){
             bubble.calcularOperaciones();
+            selection.calcularOperaciones();
             insertion.calcularOperaciones();
 
             Utilerias.randomArr(arr, tam);
+            Utilerias.imprimirArreglo(arr);
             bubble.inicializarArr(arr);
+            selection.inicializarArr(arr);
             insertion.inicializarArr(arr);
         }
+        System.out.println("--- BubbleSort ---");
         for(Resultado r: bubble.resultados){
             r.mostrarResultados();
             System.out.println();
         }
+        System.out.println("--- SelectionSort ---");
+        for(Resultado r: selection.resultados){
+            r.mostrarResultados();
+            System.out.println();
+        }
+        System.out.println("--- InsertionSort ---");
         for(Resultado r: insertion.resultados){
             r.mostrarResultados();
             System.out.println();

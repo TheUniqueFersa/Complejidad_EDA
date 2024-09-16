@@ -16,12 +16,12 @@ abstract class AlgoritmoOrdenamiento{
         comparaciones = 0;
         intercambios = 0;
         inserciones = 0;
-        return ordenar();
+        return sort();
     }
     public void inicializarArr(int [] arr) {
         this.arr = arr.clone();
     }
-    protected abstract Resultado ordenar();
+    protected abstract Resultado sort();
 }
 class Resultado{
     private String ordenadoPor;

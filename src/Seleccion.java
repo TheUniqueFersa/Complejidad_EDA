@@ -1,8 +1,38 @@
 
+public class Seleccion extends AlgoritmoOrdenamiento{
+    public Seleccion(int[] arr){
+        super(arr);
+    }
+    protected Resultado sort() {
+        selectionSort();
+        Resultado res = new Resultado("SelectionSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        resultados.add(res);
+        return res;
+    }
+    private void selectionSort(){  
+        int n = arr.length;
+        operaciones+=2;
 
-public class Seleccion {  
-   
-    public void selectionSort(int[] arr){  
+        operaciones+=2; //inicializa i = 0; para la comparacion
+        for (int i = 0; i < n - 1; i++, operaciones+=4) {  
+            int min = i;
+            operaciones++;
+
+            operaciones+=3;
+            for (int j = i + 1; j < n; j++, operaciones+=3) {  
+                operaciones+=3; //para acceder al elemento y comparar
+                comparaciones++;
+                if (arr[j] < arr[min]){  
+                    min = j;  
+                    operaciones++;
+                }                      
+            }
+            intercambios++;
+            operaciones+=7; //para acceder al elemento y comparar
+            Utilerias.intercambiar(arr, i,min);
+        }  
+    }
+    public static void sort(int[] arr){
         int n = arr.length;
         for (int i = 0; i < n - 1; i++){  
             int min = i;  
@@ -13,6 +43,6 @@ public class Seleccion {
             }  
             Utilerias.intercambiar(arr, i,min);
         }  
-    }  
+    } 
 
 }  

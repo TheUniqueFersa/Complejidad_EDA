@@ -3,9 +3,9 @@ public class Insercion extends AlgoritmoOrdenamiento{
     public Insercion(int[] arr){
         super(arr);
     }
-    protected Resultado ordenar() {
+    protected Resultado sort() {
         insertionSort();
-        Resultado res = new Resultado("Insercion", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("InsertionSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
         resultados.add(res);
         return res;
     }
@@ -40,7 +40,7 @@ public class Insercion extends AlgoritmoOrdenamiento{
             operaciones++; //para la condicion del for
        }  
     } 
-    public static void ordenar(int array[]) {  
+    public static void sort(int array[]) {  
         int n = array.length;  
         for (int j = 1; j < n; j++) {  
             int key = array[j];  

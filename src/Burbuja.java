@@ -20,13 +20,13 @@ public class Burbuja extends AlgoritmoOrdenamiento{
     public Burbuja(int[] arr){
         super(arr);
     }
-    protected Resultado ordenar() {
+    protected Resultado sort() {
         bubbleSort();
         Resultado res = new Resultado("BubbleSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
         resultados.add(res);
         return res;
     }
-    public static void ordenar(int[] arr) { //Para uso estático: BubbleSort convencional
+    public static void sort(int[] arr) { //Para uso estático: BubbleSort convencional
         int n = arr.length;
         for (int i = n; i > 0; i--) {
             for (int j = 0; j < i-1; j++) {
@@ -71,7 +71,7 @@ public class Burbuja extends AlgoritmoOrdenamiento{
             if (!cambio) {
                 return 0;
             }
-            
+
             operaciones++;
         }
         return 0;
