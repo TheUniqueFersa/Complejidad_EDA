@@ -18,11 +18,13 @@ public class Principal {
         Seleccion selection = new Seleccion(arr);
         Insercion insertion = new Insercion(arr);
         Heap heap = new Heap(arr);
+        Quick quick = new Quick(arr);
         for(int i = 0; i < n; i++){
             bubble.calcularOperaciones();
             selection.calcularOperaciones();
             insertion.calcularOperaciones();
             heap.calcularOperaciones();
+            quick.calcularOperaciones();
 
             Utilerias.randomArr(arr, tam);
             Utilerias.imprimirArreglo(arr);
@@ -30,6 +32,7 @@ public class Principal {
             selection.inicializarArr(arr);
             insertion.inicializarArr(arr);
             heap.inicializarArr(arr);
+            quick.inicializarArr(arr);
         }
         System.out.println("--- BubbleSort ---");
         for(Resultado r: bubble.resultados){
@@ -48,6 +51,11 @@ public class Principal {
         }
         System.out.println("--- HeapSort ---");
         for(Resultado r: heap.resultados){
+            r.mostrarResultados();
+            System.out.println();
+        }
+        System.out.println("--- QuickSort ---");
+        for(Resultado r: quick.resultados){
             r.mostrarResultados();
             System.out.println();
         }
