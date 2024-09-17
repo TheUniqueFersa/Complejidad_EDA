@@ -1,5 +1,5 @@
 /*
-* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTONOMA DE MEXICO. FACULTAD DE INGENIERIA. == 
  * @autor: Fernando Samuel López Morales 
  * @autor: Luis Adrián González Falcón
  * 
@@ -95,5 +95,6 @@ public class Principal {
             r.escribirOperacionesEnArchivo();
             // System.out.println();
         }
+        
     }
 }
