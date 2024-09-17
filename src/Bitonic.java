@@ -28,7 +28,7 @@ public class Bitonic extends AlgoritmoOrdenamiento{
 
         // Rellenar el arreglo para que su tamaño sea una potencia de 2
         int[] extendedArray = Arrays.copyOf(arr, newSize);
-        operaciones+=1; //solo se considera operacion de asignacion...?
+        operaciones+=1+arr.length+newSize; //solo se considera operacion de asignacion...?
 
         operaciones+=2;
         for (int i = size; i < newSize; i++, operaciones+=3) {
@@ -41,6 +41,7 @@ public class Bitonic extends AlgoritmoOrdenamiento{
         // Eliminar los elementos ficticios del arreglo
         
         System.arraycopy(extendedArray, 0, arr, 0, size);
+        operaciones += size;
     }
 
     private void bitonicMerge1(int[] array, int low, int cnt, boolean dir) {
