@@ -15,39 +15,69 @@ public class Bitonic extends AlgoritmoOrdenamiento{
 
     private void bitonicSort() {
         int size = arr.length;
+        operaciones+=2;
         int newSize = 1;
+        operaciones+=1;
+
+        operaciones+=1;
         while (newSize < size) {
             newSize *= 2;
+            operaciones+=1;
         }
+
+
         // Rellenar el arreglo para que su tamaño sea una potencia de 2
         int[] extendedArray = Arrays.copyOf(arr, newSize);
-        for (int i = size; i < newSize; i++) {
+        operaciones+=1; //solo se considera operacion de asignacion...?
+
+        operaciones+=2;
+        for (int i = size; i < newSize; i++, operaciones+=3) {
             extendedArray[i] = Integer.MAX_VALUE; // Rellenar con valor grande
+            operaciones+=2;
         }
+
+        operaciones++;
         bitonicSort1(extendedArray, 0, newSize, true);
 
         // Eliminar los elementos ficticios del arreglo
+        operaciones++;
         System.arraycopy(extendedArray, 0, arr, 0, size);
     }
 
     private void bitonicMerge1(int[] array, int low, int cnt, boolean dir) {
+        operaciones++;
         if (cnt > 1) {
             int k = cnt / 2;
-            for (int i = low; i < low + k; i++) {
+            operaciones++;
+
+            operaciones+=3;
+            for (int i = low; i < low + k; i++, operaciones+=3) {
+                operaciones+=12;
+                comparaciones+=2;
                 if ((dir && array[i] > array[i + k]) || (!dir && array[i] < array[i + k])) {
+                    operaciones+=7;
+                    intercambios++;
                     Utilerias.intercambiar(array, i, i + k);
                 }
             }
+            
             bitonicMerge1(array, low, k, dir);
             bitonicMerge1(array, low + k, k, dir);
         }
     }
 
     private void bitonicSort1(int[] array, int low, int cnt, boolean dir) {
+        operaciones+=1;
         if (cnt > 1) {
             int k = cnt / 2;
+            operaciones+=2;
+
             bitonicSort1(array, low, k, true); // Sort in ascending order
+
+            operaciones++;
             bitonicSort1(array, low + k, k, false); // Sort in descending order
+
+            operaciones++;
             bitonicMerge1(array, low, cnt, dir); // Merge the sorted halves
         }
     }
