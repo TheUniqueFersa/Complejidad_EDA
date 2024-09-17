@@ -6,7 +6,7 @@ public class Merge extends AlgoritmoOrdenamiento {
     }
     protected Resultado sort() {
         mergeSort(0, this.arr.length-1);
-        Resultado res = new Resultado("MergeSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("MergeSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }

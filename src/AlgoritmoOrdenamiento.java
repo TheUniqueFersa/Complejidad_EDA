@@ -5,7 +5,6 @@ abstract class AlgoritmoOrdenamiento{
     protected long operaciones;
     protected long comparaciones;
     protected long intercambios;
-    protected int inserciones;
     protected int[] arr;
     ArrayList<Resultado> resultados = new ArrayList<Resultado>();
     public AlgoritmoOrdenamiento(int[] arr){
@@ -17,7 +16,6 @@ abstract class AlgoritmoOrdenamiento{
         operaciones = 0;
         comparaciones = 0;
         intercambios = 0;
-        inserciones = 0;
         return sort();
     }
     public void inicializarArr(int [] arr) {
@@ -30,15 +28,13 @@ class Resultado{
     private long operaciones;
     private long comparaciones;
     private long intercambios;
-    private int inserciones;
     private int elemOrdenados;
     private int[] resultado;
-    public Resultado(String alg, long operaciones, long comparaciones, long intercambios, int inserciones, int[] res, int elementos){
+    public Resultado(String alg, long operaciones, long comparaciones, long intercambios, int[] res, int elementos){
         this.ordenadoPor = alg;
         this.operaciones = operaciones;
         this.comparaciones = comparaciones;
         this.intercambios = intercambios;
-        this.inserciones = inserciones;
         this.resultado = res.clone();
         this.elemOrdenados = elementos;
     }
@@ -47,7 +43,6 @@ class Resultado{
         System.out.println("Operaciones: "+operaciones);
         System.out.println("Comparaciones: "+comparaciones);
         System.out.println("Intercambios: "+intercambios);
-        System.out.println("Inserciones: "+inserciones);
         System.out.println("Elementos ordenados: "+elemOrdenados);
         System.out.println("Arreglo ordenado: ");
         for (int i = 0; i < resultado.length; i++) {
@@ -65,8 +60,7 @@ class Resultado{
             // archivo.write("Operaciones:\n"+operaciones+"\n");
             // archivo.write("Comparaciones: "+comparaciones+"\n");
             // archivo.write("Intercambios: "+intercambios+"\n");
-            // archivo.write("Inserciones: "+inserciones+"\n");
-            archivo.write(elemOrdenados+" "+operaciones+" "+comparaciones+" "+intercambios+" "+inserciones+"\n");
+            archivo.write(elemOrdenados+" "+operaciones+" "+comparaciones+" "+intercambios+"\n");
             // archivo.write("Elementos ordenados: "+elemOrdenados+"\n");
             // archivo.write("Arreglo ordenado: ");
             // for (int i = 0; i < resultado.length; i++) {

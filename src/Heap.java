@@ -6,7 +6,7 @@ public class Heap extends AlgoritmoOrdenamiento {
     }
     protected Resultado sort() {
         heapSort();
-        Resultado res = new Resultado("HeapSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("HeapSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }

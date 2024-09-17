@@ -9,6 +9,23 @@ public class Utilerias {
             arreglo[i] =  random.nextInt(1000)+1;
         }
     }
+    
+    public static int[] peorCaso(int n){
+        int [] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = n-i;
+        }
+        return arr;
+    }
+    
+    public static int[] mejorCaso(int n){
+        int [] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            arr[i] = i;
+        }
+        return arr;
+    }
+
 
     public static void imprimirArreglo(int[] arreglo){
         for(int i:arreglo){  
