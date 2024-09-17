@@ -1,3 +1,16 @@
+/*
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase implementa métodos de utilerias que son utiles y recurrentes en los algoritmos de ordenamiento
+ * 
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
+ * 
+ * @see Utilerias
+ * @see AlgoritmoOrdenamiento
+ */
 import java.util.Scanner;
 import java.util.List;
 import java.util.Random;
@@ -9,23 +22,6 @@ public class Utilerias {
             arreglo[i] =  random.nextInt(1000)+1;
         }
     }
-    
-    public static int[] peorCaso(int n){
-        int [] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = n-i;
-        }
-        return arr;
-    }
-    
-    public static int[] mejorCaso(int n){
-        int [] arr = new int[n];
-        for (int i = 0; i < n; i++) {
-            arr[i] = i;
-        }
-        return arr;
-    }
-
 
     public static void imprimirArreglo(int[] arreglo){
         for(int i:arreglo){  
@@ -34,79 +30,10 @@ public class Utilerias {
         System.out.println(" ");
     }
     
-
-    public static void imprimirArregloChar(char[] arreglo){
-        for(char i:arreglo){  
-            System.out.print(i+" ");  
-        }
-        System.out.println(" ");
- }
     //7 operaciones básicas
     public static void intercambiar(int[] arr, int x, int y) {
         int temp = arr[x];  //2 
         arr[x] = arr[y];  //3
         arr[y] = temp; //2
-    }
-    
-    public static void pedirDatos(char[] arr, int tamano){
-        Scanner en = new Scanner(System.in);
-        for (int i = 0; i < tamano; i++) {
-            System.out.println("Valor: "+ (i+1));
-            arr[i] = en.next().charAt(0);
-        }
-        en.close();
-    }
-    
-
-    
-
-    public static void fillZeros(int[] arr) {
-        for (int i = 0; i < arr.length; i++) {
-            arr[i] = 0;
-        }
-    }
-    public static void fillChar(char[] arr){
-        for (int i = 0; i < arr.length; i++) {       
-            arr[i] = '-';                          
-        }
-    }
-
-    public static int letraANumero(char letra) {
-        switch (letra) {
-            case 'A':     
-                return 0;
-            case 'B':
-                return 1;
-            case 'C':
-                return 2;
-            case 'D':
-                return 3;
-            case 'E':
-                return 4;
-            case 'F':
-                return 5;
-            case 'G':
-                return 6;
-            case 'H':
-                return 7;
-            case 'I':
-                return 8;
-            case 'J':
-                return 9;
-            default:
-                return 10;
-        }
-    }
-
-    public static void restore(char[] res, int[] count, char letra){
-        int indice = Utilerias.letraANumero(letra);
-        int llenado = count[indice] -1;
-        while(res[llenado] != '-'){
-            llenado--;
-        }
-        res[llenado] = letra;
-
-    }
-
-    
+    }    
 }

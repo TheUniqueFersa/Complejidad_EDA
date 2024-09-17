@@ -1,6 +1,18 @@
-//import Bubble;
+/*
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase es la principal, aquí se hacen todas las operaciones necesarias para obtener los resultados de los algoritmos de ordenamiento, 
+ * así como la escritura de los resultados en archivos
+ * 
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
+ * 
+ * @see Utilerias
+ * @see AlgoritmoOrdenamiento
+ */
 import java.util.ArrayList;
-
 public class Principal {
     public static void main(String args[]){
         int n = Integer.parseInt(args[0]);
@@ -9,11 +21,6 @@ public class Principal {
         for(int i = 0; i < arg2.length; i++){
             tamArr.add(Integer.parseInt(arg2[i]));
         }
-        for(int i = 0; i < tamArr.size(); i++){
-            System.out.println("Tamaño del arreglo: "+tamArr.get(i));
-        }
-        // Utilerias.randomArr(arr, primerTam);
-        // Utilerias.imprimirArreglo(arr);
         Bubble bubble = new Bubble();
         Selection selection = new Selection();
         Insertion insertion = new Insertion();
@@ -46,47 +53,47 @@ public class Principal {
                 bitonic.calcularOperaciones();
             }
         }
-        System.out.println("--- BubbleSort ---");
+        // System.out.println("--- BubbleSort ---");
         for(Resultado r: bubble.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- SelectionSort ---");
+        // System.out.println("--- SelectionSort ---");
         for(Resultado r: selection.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- InsertionSort ---");
+        // System.out.println("--- InsertionSort ---");
         for(Resultado r: insertion.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- HeapSort ---");
+        // System.out.println("--- HeapSort ---");
         for(Resultado r: heap.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- QuickSort ---");
+        // System.out.println("--- QuickSort ---");
         for(Resultado r: quick.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- MergeSort ---");
+        // System.out.println("--- MergeSort ---");
         for(Resultado r: merge.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
-        System.out.println("--- BitonicSort ---");
+        // System.out.println("--- BitonicSort ---");
         for(Resultado r: bitonic.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
-            System.out.println();
+            // System.out.println();
         }
     }
 }

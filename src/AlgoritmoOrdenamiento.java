@@ -1,3 +1,14 @@
+/*
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase es la madre de todos los algoritmos de ordenamiento, aquí se definen los métodos y atributos que deben tener los algoritmos de ordenamiento así como la clase Resultado
+ * 
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
+ * 
+ */
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;

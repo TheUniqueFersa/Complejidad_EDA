@@ -1,5 +1,18 @@
+/*
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase implementa el algoritmo de ordenamiento bitonic que extiende de la clase AlgoritmoOrdenamiento y los métodos
+ * sort, bitonicSort, bitonicMerge, bitonicSort1, bitonicMerge1 que son necesarios para el funcionamiento del algoritmo
+ * 
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
+ * 
+ * @see Utilerias
+ * @see AlgoritmoOrdenamiento
+ */
 import java.util.Arrays;
-
 public class Bitonic extends AlgoritmoOrdenamiento{
     public Bitonic(int[] arr){
         super(arr);
@@ -39,7 +52,6 @@ public class Bitonic extends AlgoritmoOrdenamiento{
         bitonicSort1(extendedArray, 0, newSize, true);
 
         // Eliminar los elementos ficticios del arreglo
-        
         System.arraycopy(extendedArray, 0, arr, 0, size);
         operaciones += size;
     }
@@ -73,19 +85,15 @@ public class Bitonic extends AlgoritmoOrdenamiento{
             int k = cnt / 2;
             operaciones+=2;
 
-            bitonicSort1(array, low, k, true); // Sort in ascending order
+            bitonicSort1(array, low, k, true); // Ordena en orden ascendente
 
             operaciones++;
-            bitonicSort1(array, low + k, k, false); // Sort in descending order
+            bitonicSort1(array, low + k, k, false); // Ordena en orden descendente
 
-            bitonicMerge1(array, low, cnt, dir); // Merge the sorted halves
+            bitonicMerge1(array, low, cnt, dir); // Combina las mitades ordenadas
         }
-    }
-
-        
+    }    
     //STATIC 
-    
-    
     // Método para ordenar el arreglo utilizando Bitonic Sort
     public static void sort(int[] array) {
         int size = array.length;
@@ -107,12 +115,11 @@ public class Bitonic extends AlgoritmoOrdenamiento{
     private static void bitonicSort(int[] array, int low, int cnt, boolean dir) {
         if (cnt > 1) {
             int k = cnt / 2;
-            bitonicSort(array, low, k, true); // Sort in ascending order
-            bitonicSort(array, low + k, k, false); // Sort in descending order
-            bitonicMerge(array, low, cnt, dir); // Merge the sorted halves
+            bitonicSort(array, low, k, true);
+            bitonicSort(array, low + k, k, false);
+            bitonicMerge(array, low, cnt, dir);
         }
     }
-    
     private static void bitonicMerge(int[] array, int low, int cnt, boolean dir) {
         if (cnt > 1) {
             int k = cnt / 2;
@@ -125,22 +132,4 @@ public class Bitonic extends AlgoritmoOrdenamiento{
             bitonicMerge(array, low + k, k, dir);
         }
     }
-
-
-
-    /*
-    public static void main(String[] args) {
-        // int[] originalArray = { 5, 1, 3, 2, 8, 7, 6 };
-        int[] arr = new int[25];
-        Utilerias.randomArr(arr, 25);
-        Utilerias.imprimirArreglo(arr);
-        
-        
-        // Ordenar el arreglo utilizando Bitonic Sort
-        sort(arr);
-
-        // Imprimir el resultado
-        // System.out.println(Arrays.toString(arr));
-         Utilerias.imprimirArreglo(arr);
-    }*/
 }

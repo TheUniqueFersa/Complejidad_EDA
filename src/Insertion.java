@@ -1,4 +1,17 @@
-
+/*
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase implementa el algoritmo de ordenamiento insertionSort que extiende de la clase AlgoritmoOrdenamiento y los métodos
+ * sort, insertionSort que son necesarios para el funcionamiento del algoritmo
+ * 
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
+ * 
+ * @see Utilerias
+ * @see AlgoritmoOrdenamiento
+ */
 public class Insertion extends AlgoritmoOrdenamiento{  
     public Insertion(int[] arr){
         super(arr);

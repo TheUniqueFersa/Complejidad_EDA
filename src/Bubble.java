@@ -1,22 +1,16 @@
-
 /*
- * @autors: Fernando López y Luis González
- * @file: Bubble.java
- * @brief: Esta clase implementa el algoritmo de ordenamiento burbuja
- * y extiende de la clase AlgoritmoOrdenamiento
- * @date: 16/09/2024
- * @version: 1.0
+* == PROYECTO 1. COMPLEJIDAD COMPUTACIONAL EN LOS ALGORITMOS DE ORDENAMIENTO | EDA II 2025-1. UNIVERSIDAD NACIONAL AUTÓNOMA DE MÉXICO. FACULTAD DE INGENIERÍA. == 
+ * @autor: Fernando Samuel López Morales 
+ * @autor: Luis Adrián González Falcón
+ * 
+ * Esta clase implementa el algoritmo de ordenamiento burbuja que extiende de la clase AlgoritmoOrdenamiento
+ * última modificación: 16/09/2024
+ * @version: 1.0, 2024-09-16
  * 
  * @see Utilerias
  * @see AlgoritmoOrdenamiento
- * 
  */
 public class Bubble extends AlgoritmoOrdenamiento{
-    /*
-     * @brief: Constructor de la clase Bubble
-     * @param: int[] arr
-     * @return: void
-     */
     public Bubble(int[] arr){
         super(arr);
     }
