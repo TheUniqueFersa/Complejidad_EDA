@@ -3,16 +3,12 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String args[]){
-        
         int n = Integer.parseInt(args[0]);
         String[] arg2 = args[1].split(",");
         ArrayList<Integer> tamArr = new ArrayList<>();
         for(int i = 0; i < arg2.length; i++){
             tamArr.add(Integer.parseInt(arg2[i]));
         }
-        // int primerTam = tamArr.get(0);
-        // int [] arr = new int[primerTam];
-        // tamArr.remove(0);
         for(int i = 0; i < tamArr.size(); i++){
             System.out.println("Tamaño del arreglo: "+tamArr.get(i));
         }
@@ -24,6 +20,7 @@ public class Principal {
         Heap heap = new Heap();
         Quick quick = new Quick();
         Merge merge = new Merge();
+        Bitonic bitonic = new Bitonic();
 
         int[] arr;
         for (int tam : tamArr) {
@@ -37,6 +34,7 @@ public class Principal {
                 heap.inicializarArr(arr);
                 quick.inicializarArr(arr);
                 merge.inicializarArr(arr);
+                bitonic.inicializarArr(arr);
 
 
                 bubble.calcularOperaciones();
@@ -45,6 +43,7 @@ public class Principal {
                 heap.calcularOperaciones();
                 quick.calcularOperaciones();
                 merge.calcularOperaciones();
+                bitonic.calcularOperaciones();
             }
         }
         System.out.println("--- BubbleSort ---");
@@ -79,6 +78,12 @@ public class Principal {
         }
         System.out.println("--- MergeSort ---");
         for(Resultado r: merge.resultados){
+            // r.mostrarResultados();
+            r.escribirOperacionesEnArchivo();
+            System.out.println();
+        }
+        System.out.println("--- BitonicSort ---");
+        for(Resultado r: bitonic.resultados){
             // r.mostrarResultados();
             r.escribirOperacionesEnArchivo();
             System.out.println();

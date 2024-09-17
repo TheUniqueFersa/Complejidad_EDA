@@ -8,7 +8,7 @@ public class Bitonic extends AlgoritmoOrdenamiento{
     }
     protected Resultado sort(){
         bitonicSort();
-        Resultado res = new Resultado("BitonicSort", operaciones, comparaciones, intercambios, inserciones, arr, arr.length);
+        Resultado res = new Resultado("BitonicSort", operaciones, comparaciones, intercambios, arr, arr.length);
         resultados.add(res);
         return res;
     }
