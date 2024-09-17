@@ -33,14 +33,13 @@ public class Bitonic extends AlgoritmoOrdenamiento{
         operaciones+=2;
         for (int i = size; i < newSize; i++, operaciones+=3) {
             extendedArray[i] = Integer.MAX_VALUE; // Rellenar con valor grande
-            operaciones+=2;
+            operaciones+=3;
         }
 
-        operaciones++;
         bitonicSort1(extendedArray, 0, newSize, true);
 
         // Eliminar los elementos ficticios del arreglo
-        operaciones++;
+        
         System.arraycopy(extendedArray, 0, arr, 0, size);
     }
 
@@ -48,20 +47,21 @@ public class Bitonic extends AlgoritmoOrdenamiento{
         operaciones++;
         if (cnt > 1) {
             int k = cnt / 2;
-            operaciones++;
+            operaciones+=2;
 
             operaciones+=3;
             for (int i = low; i < low + k; i++, operaciones+=3) {
                 operaciones+=12;
                 comparaciones+=2;
                 if ((dir && array[i] > array[i + k]) || (!dir && array[i] < array[i + k])) {
-                    operaciones+=7;
+                    operaciones+=8;
                     intercambios++;
                     Utilerias.intercambiar(array, i, i + k);
                 }
             }
             
             bitonicMerge1(array, low, k, dir);
+            operaciones++;
             bitonicMerge1(array, low + k, k, dir);
         }
     }
@@ -77,7 +77,6 @@ public class Bitonic extends AlgoritmoOrdenamiento{
             operaciones++;
             bitonicSort1(array, low + k, k, false); // Sort in descending order
 
-            operaciones++;
             bitonicMerge1(array, low, cnt, dir); // Merge the sorted halves
         }
     }
